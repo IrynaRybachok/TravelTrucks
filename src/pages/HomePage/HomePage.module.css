@@ -1,0 +1,59 @@
+.homeSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../../assets/images/hero-desktop-1x.jpg);
+  background-size: cover;
+  background-position: center;
+  max-width: 1440px;
+  height: 696px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+@media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .homeSection {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url(../../assets/images/hero-desktop-2x.jpg);
+  }
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  padding-left: 64px;
+}
+
+.title {
+  color: #f7f7f7;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+
+.desc {
+  color: #f7f7f7;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+  margin-bottom: 40px;
+}
+
+.btnView {
+  display: flex;
+  width: 173px;
+  padding: 16px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  background-color: #e44848;
+  border: none;
+
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.08px;
+}

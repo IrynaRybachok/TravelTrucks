@@ -1,0 +1,28 @@
+.header {
+  padding: 24px 64px;
+  display: flex;
+  gap: 450px;
+  align-items: center;
+  background-color: #f7f7f7;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.link {
+  color: #101828;
+  text-align: center;
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.active {
+  color: #d84343;
+}

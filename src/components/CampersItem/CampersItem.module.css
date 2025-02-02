@@ -1,0 +1,135 @@
+.item {
+  padding: 24px;
+  border: 1px solid #dadde1;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageCar {
+  width: 292px;
+  height: 320px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.infoCar {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 524px;
+  overflow: hidden;
+}
+
+.wrapNamePrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #101828;
+  display: inline;
+  max-width: 350px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wrapPrice {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: #101828;
+  display: inline;
+}
+
+.wrapStr2 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.wrapRating,
+.wrapLocation {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconsStar {
+  fill: #ffc531;
+}
+
+.rating,
+.location {
+  color: #101828;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.wrapDesc {
+  margin-bottom: 24px;
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #475467;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.badgesWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background-color: #f2f4f7;
+  border-radius: 100px;
+  padding: 12px 18px;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+
+.badgeText {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.iconsWater,
+.iconsGas,
+.iconsMicrowave {
+  fill: none;
+  stroke: #101828;
+}

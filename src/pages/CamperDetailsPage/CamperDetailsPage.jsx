@@ -1,5 +1,5 @@
-const DetailsPage = () => {
-  return <h2>DetailsPage.jsx</h2>;
+const CapmerDetailsPage = () => {
+  return <h2>DetailsPage</h2>;
 };
 
-export default DetailsPage;
+export default CapmerDetailsPage;

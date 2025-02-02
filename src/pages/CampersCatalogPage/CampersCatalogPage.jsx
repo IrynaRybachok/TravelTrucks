@@ -1,5 +1,10 @@
-const CatalogPage = () => {
-  return <h2>CatalogPage</h2>;
+import CampersList from "../../components/CampersList/CampersList";
+const CampersCatalogPage = () => {
+  return (
+    <div>
+      <CampersList />
+    </div>
+  );
 };
 
-export default CatalogPage;
+export default CampersCatalogPage;

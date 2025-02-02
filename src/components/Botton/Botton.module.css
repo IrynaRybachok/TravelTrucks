@@ -1,0 +1,18 @@
+.btn {
+  display: flex;
+  width: 173px;
+  padding: 16px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 200px;
+  background-color: #e44848;
+  border: none;
+
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.08px;
+}

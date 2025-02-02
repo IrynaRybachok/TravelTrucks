@@ -8,6 +8,7 @@ const initialState = {
   isLoading: false,
   isError: null,
   filters: {},
+  uniqueLocations: [],
 };
 
 const slice = createSlice({
@@ -42,6 +43,10 @@ const slice = createSlice({
         );
 
         state.campers = [...state.campers, ...existingCampers];
+      })
+      .addCase(getCampers.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = action.payload;
       });
   },
 });

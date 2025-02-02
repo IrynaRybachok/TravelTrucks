@@ -4,6 +4,7 @@
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  gap: 24px;
 }
 
 .imageCar {
@@ -101,7 +102,8 @@
 .badgesWrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 8px 8px;
+  margin-bottom: 24px;
 }
 
 .badge {
@@ -117,7 +119,6 @@
   border-radius: 100px;
   padding: 12px 18px;
   text-transform: capitalize;
-  margin-bottom: 24px;
 }
 
 .badgeText {

@@ -1,4 +1,6 @@
 import s from "./HomePage.module.css";
+import Button from "../../components/Botton/Botton";
+import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <section className={s.homeSection}>
@@ -7,7 +9,9 @@ const HomePage = () => {
         <p className={s.desc}>
           You can find everything you want in our catalog
         </p>
-        <button className={s.btnView}>View Now</button>
+        <Link to="/campers">
+          <Button text={"View Now"} />
+        </Link>
       </div>
     </section>
   );

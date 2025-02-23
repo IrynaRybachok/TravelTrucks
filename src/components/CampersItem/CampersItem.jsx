@@ -2,8 +2,8 @@ import s from "./CampersItem.module.css";
 import icons from "../../assets/icons/symbol-defs.svg";
 import Button from "../Botton/Botton";
 import { Link } from "react-router-dom";
-const CampersItem = ({
-  data: {
+const CampersItem = ({ data }) => {
+  const {
     id,
     name,
     price,
@@ -23,8 +23,7 @@ const CampersItem = ({
     water,
     gallery,
     reviews,
-  },
-}) => {
+  } = data;
   return (
     <li className={s.item}>
       <img className={s.imageCar} src={gallery[0].thumb} />

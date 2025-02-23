@@ -1,0 +1,42 @@
+.container {
+  display: block;
+  width: 100%;
+}
+.titleWrap {
+  margin-bottom: 48px;
+}
+.title {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -24px;
+  background-color: #dadde1;
+  height: 1px;
+  width: 100%;
+}
+.detailsList {
+  display: block;
+}
+
+.detailsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subtitle,
+.text {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}

@@ -1,0 +1,35 @@
+.badgesWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 8px;
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  background-color: #f2f4f7;
+  border-radius: 100px;
+  padding: 12px 18px;
+  text-transform: capitalize;
+}
+
+.badgeText {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.iconsWater,
+.iconsGas,
+.iconsMicrowave {
+  fill: none;
+  stroke: #101828;
+}

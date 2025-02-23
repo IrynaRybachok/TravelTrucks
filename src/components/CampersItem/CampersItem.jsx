@@ -1,8 +1,10 @@
 import s from "./CampersItem.module.css";
 import icons from "../../assets/icons/symbol-defs.svg";
 import Button from "../Botton/Botton";
+import { Link } from "react-router-dom";
 const CampersItem = ({
   data: {
+    id,
     name,
     price,
     rating,
@@ -141,7 +143,14 @@ const CampersItem = ({
             </li>
           )}
         </ul>
-        <Button text="Show more" className={s.button} />
+        <Link
+          to={`/campers/${id}/features`}
+          target="_blank"
+          rel="noopener noreferrer"
+          replace
+        >
+          <Button text="Show more" className={s.button} />
+        </Link>
       </div>
     </li>
   );

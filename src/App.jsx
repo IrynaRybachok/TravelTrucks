@@ -7,10 +7,16 @@ const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const CampersCatalogPage = lazy(() =>
   import("./pages/CampersCatalogPage/CampersCatalogPage")
 );
-const CapmerDetailsPage = lazy(() =>
-  import("./pages/CamperDetailsPage/CamperDetailsPage")
+const CamperDetailsPage = lazy(() =>
+  import("./pages/CamperDetailsPage/CamperDetailsPage.jsx")
 );
 const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
+const CamperFeatures = lazy(() =>
+  import("./components/CamperFeatures/CamperFeatures.jsx")
+);
+const CamperReviews = lazy(() =>
+  import("./components/CamperReviews/CamperReviews.jsx")
+);
 
 function App() {
   return (
@@ -20,7 +26,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/campers" element={<CampersCatalogPage />} />
-          <Route path="/campers/:id" element={<CapmerDetailsPage />} />
+          <Route path="/campers/:id" element={<CamperDetailsPage />}>
+            <Route path="features" element={<CamperFeatures />} />
+            <Route path="reviews" element={<CamperReviews />} />
+          </Route>
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

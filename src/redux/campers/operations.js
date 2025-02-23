@@ -20,3 +20,28 @@ export const getCampers = createAsyncThunk(
     }
   }
 );
+
+export const getCamperById = createAsyncThunk(
+  "campers/getCamperById",
+  async (id, thunkAPI) => {
+    try {
+      const { data } = await axios.get(`/campers/${id}`);
+      console.log(data);
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const getLocations = createAsyncThunk(
+  "campers/getLocations",
+  async (_, thunkApi) => {
+    try {
+      const { data } = await axios.get("/campers");
+      return data.items;
+    } catch (error) {
+      return thunkApi.rejectWithValue(error.message);
+    }
+  }
+);

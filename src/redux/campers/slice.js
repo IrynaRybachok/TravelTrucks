@@ -1,9 +1,10 @@
-import { getCampers } from "./operations";
+import { getCampers, getLocations, getCamperById } from "./operations";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   campers: [],
   totalCampers: 0,
+  currentCamper: null,
   page: 1,
   isLoading: false,
   isError: null,
@@ -41,11 +42,34 @@ const slice = createSlice({
               (existingCamper) => existingCamper.id === camper.id
             )
         );
-
         state.campers = [...state.campers, ...existingCampers];
       })
       .addCase(getCampers.rejected, (state, action) => {
         state.isLoading = false;
+        state.isError = action.payload;
+      })
+      .addCase(getCamperById.pending, (state) => {
+        state.isLoading = true;
+        state.isError = null;
+      })
+      .addCase(getCamperById.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.currentCamper = action.payload;
+      })
+      .addCase(getCamperById.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = action.payload;
+      })
+      .addCase(getLocations.pending, (state) => {
+        state.isError = null;
+      })
+      .addCase(getLocations.fulfilled, (state, action) => {
+        const uniqueLocations = [
+          ...new Set(action.payload.map((item) => item.location)),
+        ];
+        state.uniqueLocations = uniqueLocations;
+      })
+      .addCase(getLocations.rejected, (state, action) => {
         state.isError = action.payload;
       });
   },

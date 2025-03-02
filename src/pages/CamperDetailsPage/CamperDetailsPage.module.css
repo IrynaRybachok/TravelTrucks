@@ -49,3 +49,10 @@
   height: 5px;
   width: 100%;
 }
+
+.wrapContInfo {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}

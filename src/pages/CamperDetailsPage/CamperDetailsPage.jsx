@@ -2,6 +2,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import CamperDetails from "../../components/CamperDetails/CamperDetails";
 import s from "./CamperDetailsPage.module.css";
 import clsx from "clsx";
+import BookForm from "../../components/BookForm/BookForm";
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(s.link, isActive && s.active);
@@ -25,7 +26,10 @@ const CapmerDetailsPage = () => {
           </li>
         </ul>
       </div>
-      <Outlet />
+      <div className={s.wrapContInfo}>
+        <Outlet />
+        <BookForm />
+      </div>
     </div>
   );
 };

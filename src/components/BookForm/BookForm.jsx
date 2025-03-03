@@ -72,6 +72,8 @@ const BookForm = () => {
                   dateFormat="dd/MM/yyyy"
                   minDate={today}
                   wrapperClassName={s.field}
+                  calendarClassName="calendar"
+                  portalId="root"
                 />
               )}
             </Field>
@@ -87,12 +89,12 @@ const BookForm = () => {
               as="textarea"
               name="comment"
               placeholder="Comment"
-              rows="5"
+              rows="8"
             />
             <ErrorMessage className={s.error} name="comment" component="span" />
           </div>
         </div>
-        <Button text={"Send"} />
+        <Button className={s.btnSend} text={"Send"} />
       </Form>
     </Formik>
   );

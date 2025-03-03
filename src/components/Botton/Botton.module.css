@@ -15,4 +15,9 @@
   font-weight: 500;
   line-height: 24px; /* 150% */
   letter-spacing: -0.08px;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  background-color: #d84343;
 }

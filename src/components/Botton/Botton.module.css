@@ -1,7 +1,8 @@
 .btn {
   display: flex;
-  width: 173px;
-  padding: 16px 50px;
+  width: 166px;
+  height: 56px;
+  /* padding: 16px 50px; */
   justify-content: center;
   align-items: center;
   border-radius: 200px;

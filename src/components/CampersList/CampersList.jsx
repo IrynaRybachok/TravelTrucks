@@ -10,7 +10,6 @@ import { useEffect } from "react";
 import { getCampers } from "../../redux/campers/operations";
 import s from "./CampersList.module.css";
 import { setPage } from "../../redux/campers/slice";
-import Button from "../Botton/Botton";
 
 const CampersList = () => {
   const campers = useSelector(selectCampers);
@@ -33,19 +32,18 @@ const CampersList = () => {
   }, [dispatch, page]);
 
   return (
-    <>
+    <div>
       <ul className={s.list}>
         {campers.map((camper) => (
           <CampersItem key={camper.id} data={camper} />
         ))}
       </ul>
       {buttonIsActive && (
-        <Button
-          text={isLoading ? "Loading..." : "Load more"}
-          onClick={loadMore}
-        />
+        <button className={s.btnLoadMore} onClick={loadMore}>
+          {isLoading ? "Loading..." : "Load more"}
+        </button>
       )}
-    </>
+    </div>
   );
 };
 

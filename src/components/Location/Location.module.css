@@ -1,0 +1,26 @@
+.title {
+  color: #6c717b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.wrapInput {
+  position: relative;
+  width: 100%;
+}
+
+.iconMap {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  z-index: 1;
+  fill: #6c717b;
+  transition: fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wrapInput:focus-within .iconMap {
+  fill: #101828;
+}

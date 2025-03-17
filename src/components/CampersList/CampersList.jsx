@@ -4,6 +4,7 @@ import {
   selectTotalCampers,
   selectIsLoading,
   selectPage,
+  selectFilters,
 } from "../../redux/campers/selectors";
 import CampersItem from "../CampersItem/CampersItem";
 import { useEffect } from "react";
@@ -19,6 +20,7 @@ const CampersList = () => {
   const limit = 5;
   const totalPages = Math.ceil(totalCampers / limit);
   const buttonIsActive = page < totalPages;
+  const filters = useSelector(selectFilters);
 
   const loadMore = () => {
     if (buttonIsActive) {
@@ -28,8 +30,12 @@ const CampersList = () => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getCampers({ page, limit, filters: {} })); // Загружаем данные при монтировании
-  }, [dispatch, page]);
+    if (Object.keys(filters).length === 0) {
+      dispatch(getCampers({ page, limit, filters: {} })); // Пустые фильтры при первом заходе
+    } else {
+      dispatch(getCampers({ page, limit, filters })); // Применение фильтров
+    }
+  }, [page, filters, dispatch]);
 
   return (
     <div>

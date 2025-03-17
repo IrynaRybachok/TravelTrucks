@@ -11,7 +11,7 @@ export const getCampers = createAsyncThunk(
         params: {
           page,
           limit,
-          ...filters, // all filters
+          ...filters,
         },
       });
       return data;

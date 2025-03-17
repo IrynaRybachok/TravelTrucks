@@ -16,6 +16,10 @@ const slice = createSlice({
   name: "campers",
   initialState,
   reducers: {
+    clearCampers: (state) => {
+      state.campers = [];
+      state.totalCampers = 0;
+    },
     setFilters: (state, action) => {
       state.filters = action.payload; // обновляем фильтр
     },
@@ -75,6 +79,6 @@ const slice = createSlice({
   },
 });
 
-export const { setFilters, setPage, resetPage } = slice.actions;
+export const { clearCampers, setFilters, setPage, resetPage } = slice.actions;
 
 export const campersReducer = slice.reducer;

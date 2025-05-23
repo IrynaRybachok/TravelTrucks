@@ -1,9 +1,14 @@
 .header {
-  padding: 24px 64px;
   display: flex;
   gap: 450px;
+  justify-content: space-around;
   align-items: center;
   background-color: #f7f7f7;
+}
+
+.linkLogo {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .nav {

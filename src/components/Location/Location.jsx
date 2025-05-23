@@ -76,7 +76,7 @@ const Location = () => {
           classNamePrefix="select"
           styles={customStyles}
           placeholder="City"
-          components={{ Placeholder: CustomPlaceholder }} // використовується кастомний Placeholder
+          components={{ Placeholder: CustomPlaceholder }} // use castom Placeholder
           isClearable
         />
       </div>

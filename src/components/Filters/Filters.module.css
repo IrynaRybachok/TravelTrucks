@@ -50,10 +50,17 @@
   border-radius: 12px;
   border: 1px solid #dadde1;
   background-color: #fff;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+}
+
+.btnOptions:hover {
+  transform: scale(1.1);
 }
 
 .activeBtnOptions {
   border-color: #e44848;
+  transform: scale(0.95);
 }
 
 .typeBox {

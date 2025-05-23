@@ -14,7 +14,6 @@ const Filters = () => {
     equipment: [],
     form: "",
   });
-
   const spritePath = "/src/assets/icons/symbol-defs.svg";
 
   // Опции фильтра

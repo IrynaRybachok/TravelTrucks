@@ -6,7 +6,7 @@ const Button = ({ text, onClick, type, className }) => {
       onClick={onClick}
       className={`${s.btn} ${className}`}
     >
-      {text}
+      <span className={s.btnText}>{text}</span>
     </button>
   );
 };

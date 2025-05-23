@@ -49,6 +49,11 @@ const CampersList = () => {
           {isLoading ? "Loading..." : "Load more"}
         </button>
       )}
+      {campers.length === 0 && (
+        <div className={s.boxNotResults}>
+          <img src="/src/assets/images/no_result1.jpg" />
+        </div>
+      )}
     </div>
   );
 };

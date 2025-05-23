@@ -9,7 +9,7 @@ const buildLinkClass = ({ isActive }) => {
 const Navigation = () => {
   return (
     <header className={s.header}>
-      <Link to="/">
+      <Link className={s.linkLogo} to="/">
         <svg className={s.logo} width={136} height={16}>
           <use href={`${icons}#icon-Logo`} />
         </svg>
@@ -26,6 +26,7 @@ const Navigation = () => {
           </NavLink>
         </li>
       </ul>
+      <div></div>
     </header>
   );
 };

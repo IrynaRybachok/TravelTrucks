@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Navigation from "./components/Navigation/Navigation";
+import Loader from "./components/Loader/Loader.jsx";
 
 const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
 const CampersCatalogPage = lazy(() =>
@@ -23,7 +24,7 @@ function App() {
     <>
       <Navigation />
       <Suspense>
-        <Routes>
+        <Routes fallback={<Loader />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/campers" element={<CampersCatalogPage />} />
           <Route path="/campers/:id" element={<CamperDetailsPage />}>

@@ -1,5 +1,5 @@
 import s from "./CampersItem.module.css";
-import icons from "../../assets/icons/symbol-defs.svg";
+import icons from "../../../public/icons/symbol-defs.svg";
 import Button from "../Botton/Botton";
 import { Link } from "react-router-dom";
 const CampersItem = ({ data }) => {

@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { selectCurrentCamper } from "../../redux/campers/selectors";
 import s from "./CamperDetails.module.css";
-import icons from "../../assets/icons/symbol-defs.svg";
+import icons from "../../../public/icons/symbol-defs.svg";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { getCamperById } from "../../redux/campers/operations";

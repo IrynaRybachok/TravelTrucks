@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import s from "./Navigation.module.css";
 import clsx from "clsx";
-import icons from "../../assets/icons/symbol-defs.svg";
+import icons from "../../../public/icons/symbol-defs.svg";
 const buildLinkClass = ({ isActive }) => {
   return clsx(s.link, isActive && s.active);
 };

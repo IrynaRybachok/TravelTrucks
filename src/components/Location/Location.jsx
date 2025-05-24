@@ -1,7 +1,7 @@
 import s from "./Location.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUniqueLocations } from "../../redux/campers/selectors";
-import icons from "../../assets/icons/symbol-defs.svg";
+import icons from "../../../public/icons/symbol-defs.svg";
 import { components } from "react-select";
 import { useEffect } from "react";
 import { getLocations } from "../../redux/campers/operations";

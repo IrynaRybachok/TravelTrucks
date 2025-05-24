@@ -51,7 +51,10 @@ const CampersList = () => {
       )}
       {campers.length === 0 && (
         <div className={s.boxNotResults}>
-          <img src="/src/assets/images/no_result1.jpg" />
+          <img
+            src="/src/assets/images/no_result1.jpg"
+            alt="No results found for the given query."
+          />
         </div>
       )}
     </div>

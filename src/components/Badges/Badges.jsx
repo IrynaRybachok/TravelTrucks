@@ -1,4 +1,4 @@
-import icons from "../../assets/icons/symbol-defs.svg";
+import icons from "../../../public/icons/symbol-defs.svg";
 import s from "./Badges.module.css";
 const Bades = ({ data }) => {
   const {
